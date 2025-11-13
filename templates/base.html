@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{ get_url(path="styles/styles.css") | safe }}" />
 </head>
 <body class="min-h-40">
-    <ul class="flex flex-wrap py-5 text-cyan-800 justify-center backdrop-blur-lg shadow-lg bg-opacity-10 from-sky-50 via-purple-50 to-fuchsia-50 bg-gradient-to-r">
+    <ul class="flex flex-wrap py-3 text-cyan-800 justify-center backdrop-blur-lg shadow-lg">
         <p class="font-light px-5">
             This is an Open-Source initiative by
             <a href="https://samirparhi.com/" class="underline">
@@ -26,14 +26,15 @@
     </ul>
     <header class="mx-1 min-w-3.5 bg-gradient-to-r from-fuchsia-50 to-rose-50 bg-opacity-10 rounded-lg border-2 border-violet-500 backdrop-blur-lg shadow-lg relative">
         </div>
-        <div class="px-5 container flex justify-between flex-wrap items-center">
+        <div class="p-4 container flex justify-between flex-wrap items-center">
             <!-- Logo on the left -->
             <a href="/" class="flex items-center px-5">
                 {% set mdata = get_image_metadata(path="img/brand/s9lab-logo-new.png") %}
                 {% set w = (mdata.width / 2) | int %}
                 {% set h = (mdata.height / 2) | int %}
                 {% set image = resize_image(path="img/brand/s9lab-logo-new.png", width=w, height=h, op="fit_width") %}
-                <img src="{{ image.url }}" alt="Logo" srcset="/{{ "img/brand/s9lab-logo-new.png" }} 2x" class="w-16 h-18">
+                <img src="{{ image.url }}" alt="Logo" srcset="/{{"img/brand/skyy-lo-new.png" }} 2x"/>
+                <!-- <img src="{{ image.url }}" srcset="/{{"img/brand/skyy-lo-new.png"}} 2x"/> -->
             </a>
     
             <!-- Menu on the right -->
